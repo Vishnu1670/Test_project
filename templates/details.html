@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shop</title>
+</head>
+<body>
+
+<center>
+<h1>ADD INFO</h1>
+<form method="post">
+    <div>
+        <label>Name</label><br>
+        <input type="text" name="user_name" required>
+    </div><br>
+
+    <div>
+        <label>Age</label><br>
+        <input type="number" name="age" required>
+    </div><br>
+
+    <input type="submit" value="Save">
+</form><br>
+<div>
+    <a href="{{ url_for('show')}}">
+        <button>Back</button>
+    </a>
+</div>
+</center>
+
+</body>
+</html>

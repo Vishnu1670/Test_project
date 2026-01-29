@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit</title>
+</head>
+<body>
+<center>
+    <form method="post">
+        <div>
+            <label>Name</label><br>
+            <input type="text" name="user_name" required value="{{ detail.name }}">
+        </div><br>
+
+        <div>
+            <label>Age</label><br>
+            <input type="number" name="age" required value="{{ detail.age }}">
+        </div><br>
+
+        <input type="submit" value="Update"><br>
+    </form><br>
+    <div>
+            <a href="{{ url_for('show')}}">
+            <button>Back</button>
+            </a>
+        </div><br>
+
+</center>
+</body>
+</html>
+<style>body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a6268;
+}
+
+a {
+    text-decoration: none;
+}
+</style>
