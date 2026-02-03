@@ -20,7 +20,7 @@
                     <td>{{d.age}}</td>
                     <td>
                         <a href="{{ url_for('edit', id=d.id)}}">
-                            <button>Edit</button>
+                            <button id="btn_edt">Edit</button>
                         </a>
                     </td>
                     <td>
@@ -37,11 +37,68 @@
     </table>
     <div>
         <a href="{{ url_for('det_add')}}">
-            <button>Add Details</button>
+            <button id="btn_add">Add Details</button>
         </a>
-    </div>
+    </div><br>
+    
 </body>
 </html>
+<input id="keyInput" placeholder="Press a key">
+
+<script>
+let keyInput = document.getElementById("keyInput");
+
+keyInput.addEventListener("keydown", function (e) {
+    console.log("Key pressed:", e.key);
+});
+</script>
+
+<p id="hoverText">Hover me</p>
+
+<script>
+let hoverText = document.getElementById("hoverText");
+
+hoverText.addEventListener("mouseover", function () {
+    hoverText.style.color = "red";
+});
+hoverText.addEventListener("mouseout", function(){
+    hoverText.style.color = "black";
+});
+
+
+</script>
+
+
+<script>
+    let edt = document.getElementById("btn_edt")
+    let add = document.getElementById("btn_add")
+    edt.onclick= function(){
+        alert("Edit")
+    }
+    add.addEventListener("mouseover", function(){
+        add.style.color = "red";
+        add.style.backgroundColor= "black";
+    });
+    add.addEventListener("mouseout", function(){
+        add.style.color = "";
+        add.style.backgroundColor= "";
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style>body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f8;
